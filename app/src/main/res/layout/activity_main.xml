@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context="gr.gandg.george.block03.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="30"
+        android:weightSum="10"
+        android:background="@android:color/holo_blue_light">
+
+        <Button
+            android:text="Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_small"
+            android:onClick="showClicked" />
+
+        <Button
+            android:text="BIG"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:id="@+id/button_big"
+            android:layout_weight="5"
+            android:onClick="showClicked" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="70"
+        android:background="@drawable/compass">
+
+        <Button
+            android:text="SOUTH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="58dp"
+            android:id="@+id/button_south"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/button_north"
+            android:layout_alignStart="@+id/button_north"
+            android:onClick="showClicked" />
+
+        <Button
+            android:text="NORTH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="58dp"
+            android:id="@+id/button_north"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="showClicked" />
+
+        <Button
+            android:text="WEST"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_west"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/button_north"
+            android:layout_toStartOf="@+id/button_north"
+            android:onClick="showClicked" />
+
+        <Button
+            android:text="EAST"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/button_west"
+            android:layout_toRightOf="@+id/button_north"
+            android:layout_toEndOf="@+id/button_north"
+            android:id="@+id/button_east"
+            android:onClick="showClicked" />
+
+        <Button
+            android:text="CENTER"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/button_center"
+            android:onClick="showClicked" />
+    </RelativeLayout>
+
+
+</LinearLayout>
